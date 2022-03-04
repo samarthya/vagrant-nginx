@@ -151,3 +151,35 @@ vagrant reload --provision
 ```
 
 ![](./images/static-ip.png)
+
+You can check the machine IP has been assigned
+
+```bash
+vagrant@vagrant-ubuntu-trusty-64:~$ ifconfig
+eth0      Link encap:Ethernet  HWaddr 08:00:27:5f:bb:e6  
+          inet addr:10.0.2.15  Bcast:10.0.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:fe5f:bbe6/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1314 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:962 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:167726 (167.7 KB)  TX bytes:184730 (184.7 KB)
+
+eth1      Link encap:Ethernet  HWaddr 08:00:27:94:d2:d4  
+          inet addr:192.168.56.11  Bcast:192.168.56.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:fe94:d2d4/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:36 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:24 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:10138 (10.1 KB)  TX bytes:5201 (5.2 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:16 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:16 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1184 (1.1 KB)  TX bytes:1184 (1.1 KB)
+```
