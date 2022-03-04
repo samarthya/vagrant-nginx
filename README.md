@@ -27,6 +27,7 @@ It creates the template vagrant file that I can edit for my use
 ## Deploying Nginx
 
 Add the following towards the end before the `end` statement
+
 ```yaml
   config.vm.network "forwarded_port", guest: 80, host: 9191
   config.vm.provision "shell", inline: <<-SHELL
@@ -56,3 +57,9 @@ Bringing machine 'default' up with 'virtualbox' provider...
 ## Voila!
 
 ~[](./images/localhost.png)
+
+## Port forwarding
+
+```yaml
+config.vm.network "forwarded_port", guest: 80, host: 9191
+```
