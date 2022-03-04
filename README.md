@@ -183,3 +183,32 @@ lo        Link encap:Local Loopback
           collisions:0 txqueuelen:0 
           RX bytes:1184 (1.1 KB)  TX bytes:1184 (1.1 KB)
 ```
+
+## PUBLIC IP (DHCP)
+
+```yaml
+config.vm.network "public_network"
+```
+
+```bash
+vagrant reload --provision    
+==> default: Attempting graceful shutdown of VM...
+==> default: Checking if box 'ubuntu/trusty64' version '20190514.0.0' is up to date...
+==> default: Clearing any previously set forwarded ports...
+==> default: Fixed port collision for 22 => 2222. Now on port 2200.
+==> default: Clearing any previously set network interfaces...
+==> default: Available bridged network interfaces:
+1) en0: Wi-Fi
+2) en5: USB Ethernet(?)
+3) awdl0
+4) llw0
+5) en2: Thunderbolt 2
+6) en1: Thunderbolt 1
+7) en3: Thunderbolt 3
+8) en4: Thunderbolt 4
+9) bridge0
+==> default: When choosing an interface, it is usually the one that is
+==> default: being used to connect to the internet.
+==> default: 
+    default: Which interface should the network bridge to? 1
+```
